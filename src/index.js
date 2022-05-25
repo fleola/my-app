@@ -1,5 +1,5 @@
 /* 
-Write a function that receives a name argument and returns a h1 tag with the name variable appended to the "Hello, " string.
+Write a function that receives two parameters, a and b and returns the sum of them within an h2 tag.
 */
 
-const setName = name => <h1>Hello, {name}</h1>
+const sum = (a,b) => <h2>{a+b}</h2>
