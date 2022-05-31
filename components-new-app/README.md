@@ -1,3 +1,3 @@
-## Components - 02
+## Components - 03
 
-Write a Hello class components that renders the "Hello, World!" message within an h1 tag.
+Write a class component called App that renders the Hello component within a div tag.
