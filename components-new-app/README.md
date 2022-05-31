@@ -1,3 +1,3 @@
-## Components - 07
+## Props - 01
 
-Extract the "What a beautiful day!" message into a new component called Message and render it within the Hello component.
+Create a Welcome class component that receives a name prop and renders the Welcome, {name}! message within a p tag. Render this component to you App component, passing it a name prop of your choosing.
