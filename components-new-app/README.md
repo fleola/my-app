@@ -1,3 +1,3 @@
-## Components - 04
+## Components - 06
 
-Create a new index.js file within the src folder and render the App component using the ReactDOM.render method.
+Modify the Hello component so that it shows a p tag below the h1 tag with the message "What a beautiful day!".
