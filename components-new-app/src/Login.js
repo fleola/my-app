@@ -19,15 +19,29 @@ export class Login extends React.Component {
   handleLogin = () => {
     this.props.login(this.state);
   };
+  handleClean = () => {
+    this.setState(() => {
+      return {
+        username: "",
+        password: "",
+        remember: false,
+      };
+    });
+  };
 
   render() {
     return (
       <div>
         <label>Username</label>
-        <input name="username" onChange={this.handleInput}></input>
+        <input
+          name="username"
+          value={this.state.username}
+          onChange={this.handleInput}
+        ></input>
         <label>Password</label>
         <input
           name="password"
+          value={this.state.password}
           type="password"
           onChange={this.handleInput}
         ></input>
@@ -35,6 +49,7 @@ export class Login extends React.Component {
         <input
           name="remember"
           type="checkbox"
+          checked={this.state.remember}
           onChange={this.handleInput}
         ></input>
 
@@ -44,6 +59,7 @@ export class Login extends React.Component {
         >
           Login
         </button>
+        <button onClick={this.handleClean}>Reset</button>
       </div>
     );
   }
