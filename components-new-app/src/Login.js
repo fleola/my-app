@@ -16,6 +16,9 @@ export class Login extends React.Component {
       [name]: type === "checkbox" ? remember : value,
     });
   };
+  handleLogin = () => {
+    this.props.login(this.state);
+  };
 
   render() {
     return (
@@ -34,6 +37,13 @@ export class Login extends React.Component {
           type="checkbox"
           onChange={this.handleInput}
         ></input>
+
+        <button
+          disabled={this.state.username && this.state.password ? false : true}
+          onClick={this.handleLogin}
+        >
+          Login
+        </button>
       </div>
     );
   }
