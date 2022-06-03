@@ -16,7 +16,6 @@ export class TodoList extends React.Component {
     this.setState((state) => {
       const items = state.items.concat(state.todo);
       return {
-        todo: "",
         items,
       };
     });
