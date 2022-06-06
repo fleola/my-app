@@ -38,7 +38,15 @@ export class TodoList extends React.Component {
         <button onClick={this.handleResetButton}>Reset</button>
         <ul>
           {this.state.items.map((item, index) => (
-            <li key={item + index}>{item}</li>
+            <li key={item + index}>
+              {item}{" "}
+              <button
+              //onClick={this.state.items.splice(index, 1)}
+              //delete item[index] ||
+              >
+                Remove TODO
+              </button>{" "}
+            </li>
           ))}
         </ul>
       </div>
