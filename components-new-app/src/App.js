@@ -5,15 +5,13 @@ import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
-import { TodoList } from "./TodoList";
-import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
-const onLogin = (state) => {
-  console.log(state);
-};
-
 export class App extends React.Component {
+  onLogin = (state) => {
+    console.log(state);
+  };
+
   render() {
     return (
       <div>
@@ -27,9 +25,7 @@ export class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
-        <Login login={onLogin} />
-        <UncontrolledLogin />
-        <TodoList />
+        <Login login={this.onLogin} />
       </div>
     );
   }
