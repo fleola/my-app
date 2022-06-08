@@ -15,7 +15,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container title="That's my title">
         <Hello />
         <Welcome name="John" age={19} />
         <Counter
