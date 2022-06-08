@@ -6,6 +6,7 @@ import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { Welcome } from "./Welcome";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   onLogin = (state) => {
@@ -14,7 +15,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Hello />
         <Welcome name="John" age={19} />
         <Counter
@@ -26,7 +27,7 @@ export class App extends React.Component {
         <ClickTracker />
         <InteractiveWelcome />
         <Login login={this.onLogin} />
-      </div>
+      </Container>
     );
   }
 }
