@@ -8,10 +8,20 @@ import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { TodoList } from "./TodoList";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 
 export class App extends React.Component {
   onLogin = (state) => {
     console.log(state);
+  };
+  state = {
+    language: "en",
+  };
+  handleChange = (event) => {
+    this.setState({
+      language: event.target.value,
+    });
   };
 
   render() {
@@ -40,6 +50,13 @@ export class App extends React.Component {
             ));
           }}
         />
+        <LanguageContext.Provider value={this.state.language}>
+          <select value={this.state.language} onChange={this.handleChange}>
+            <option value="english">English</option>
+            <option value="italian">Italian</option>
+          </select>
+          <DisplayLanguage />
+        </LanguageContext.Provider>
       </Container>
     );
   }
