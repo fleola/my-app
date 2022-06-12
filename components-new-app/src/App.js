@@ -7,6 +7,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
+import { TodoList } from "./TodoList";
 
 export class App extends React.Component {
   onLogin = (state) => {
@@ -27,6 +28,18 @@ export class App extends React.Component {
         <ClickTracker />
         <InteractiveWelcome />
         <Login login={this.onLogin} />
+        <TodoList
+          render={(items, handleRemoveTodo) => {
+            return items.map((item, index) => (
+              <li key={item + index}>
+                {item}
+                <button onClick={() => handleRemoveTodo(index)}>
+                  Remove TODO
+                </button>
+              </li>
+            ));
+          }}
+        />
       </Container>
     );
   }
