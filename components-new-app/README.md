@@ -1,3 +1,3 @@
-## Function Components - 01
+## Function Components - 02
 
-Rewrite the Welcome component to be a function component.
+Write a Sum function component that receives a numbers prop (expected to be an array of numbers) and renders the sum of all numbers in the array within a h1 tag.
