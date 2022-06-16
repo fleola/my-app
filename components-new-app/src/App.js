@@ -29,7 +29,7 @@ export class App extends React.Component {
     return (
       <Container title="That's my title">
         <Hello />
-        <Sum numbers={[1, 2, 3, 4, 5]} />
+        <Sum />
         <Welcome name="John" age={19} />
         <Counter
           initialCount={5}
