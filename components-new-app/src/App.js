@@ -10,7 +10,9 @@ export class App extends React.Component {
       <div>
         <Hello />
         <Welcome name="John" age={19} />
-        <ClickCounter />
+        <ClickCounter
+          onCounterChange={(val) => console.log(`The counter now is: ${val}`)}
+        />
         {/* <Counter initialCount={5} incrementAmount={5} incrementInterval={3000}/> */}
       </div>
     );
