@@ -1,6 +1,6 @@
 import React from "react";
 import { Counter } from "./Counter";
-import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 
@@ -11,7 +11,7 @@ export class App extends React.Component {
         <Hello />
         <Welcome name="John" age={19} />
         <Counter />
-        <GithubUser username="jagama" />
+        <GithubUserList />
       </div>
     );
   }
