@@ -1,22 +1,16 @@
-import React from "react";
-import { ClickCounter } from "./ClickCounter";
-import { Counter } from "./Counter";
-import { Hello } from "./Hello";
-import { Welcome } from "./Welcome";
+import React from 'react'
+import { Counter } from './Counter'
+import { Hello } from './Hello'
+import { Welcome } from './Welcome'
 
-export class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Hello />
-        <Welcome name="John" age={19} />
-        <Counter
-          initialCount={5}
-          incrementAmount={5}
-          incrementInterval={3000}
-        />
-        <ClickCounter />
-      </div>
-    );
-  }
+export class App extends React.Component{
+    render(){
+        return (
+            <div>
+                <Hello/>
+                <Welcome name="John" age={19}/>
+                <Counter initialCount={5} incrementAmount={5} incrementInterval={3000}/>
+            </div>
+        )
+    }
 }
