@@ -1,56 +1,55 @@
-import React from "react";
+import { useState } from "react";
 
-export class Login extends React.Component {
-  state = {
+export function Login({ login }) {
+  const [data, setData] = useState({
     username: "",
     password: "",
     remember: false,
-  };
-  handleInput = (event) => {
-    const name = event.target.name;
-    const type = event.target.type;
-    const value = event.target.value;
-    const remember = event.target.checked;
+  });
 
-    this.setState({
-      [name]: type === "checkbox" ? remember : value,
+  const handleInput = (event) => {
+    const { name, type, value, checked } = event.target;
+
+    setData((data) => {
+      return {
+        ...data,
+        [name]: type === "checkbox" ? checked : value,
+      };
     });
   };
-  handleLogin = () => {
-    this.props.login(this.state);
+  const handleLogin = () => {
+    login(data);
   };
 
-  render() {
-    return (
-      <div>
-        <label>Username</label>
-        <input
-          name="username"
-          value={this.state.username}
-          onChange={this.handleInput}
-        ></input>
-        <label>Password</label>
-        <input
-          name="password"
-          type="password"
-          value={this.state.password}
-          onChange={this.handleInput}
-        ></input>
-        <label>Remember ?</label>
-        <input
-          name="remember"
-          type="checkbox"
-          checked={this.state.remember}
-          onChange={this.handleInput}
-        ></input>
+  return (
+    <div>
+      <label>Username</label>
+      <input
+        name="username"
+        value={data.username}
+        onChange={handleInput}
+      ></input>
+      <label>Password</label>
+      <input
+        name="password"
+        type="password"
+        value={data.password}
+        onChange={handleInput}
+      ></input>
+      <label>Remember ?</label>
+      <input
+        name="remember"
+        type="checkbox"
+        checked={data.remember}
+        onChange={handleInput}
+      ></input>
 
-        <button
-          disabled={this.state.username && this.state.password ? false : true}
-          onClick={this.handleLogin}
-        >
-          Login
-        </button>
-      </div>
-    );
-  }
+      <button
+        disabled={data.username && data.password ? false : true}
+        onClick={handleLogin}
+      >
+        Login
+      </button>
+    </div>
+  );
 }
