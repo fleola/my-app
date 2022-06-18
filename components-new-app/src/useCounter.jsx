@@ -1,24 +1,24 @@
 import { useState } from "react";
 
-export function useCounter(stateValue){
-    const[data, setData] = useState(stateValue)
+export function useCounter(stateValue) {
+  const [data, setData] = useState(stateValue);
 
-    const handleIncrementCount = () => {
-        setData((data) => data + 1);
-      };
+  const handleIncrementCount = () => {
+    setData((data) => data + 1);
+  };
 
-      const handleDecrementCount = () => {
-        setData((data) => data - 1);
-      };
+  const handleDecrementCount = () => {
+    setData((data) => data - 1);
+  };
 
-      const handleReset = () => {
-        setData(stateValue);
-      };
+  const handleReset = () => {
+    setData(stateValue);
+  };
 
-      return{
-        state: data,
-        incrementFunction: handleIncrementCount,
-        decrementFunction: handleDecrementCount,
-        resetFunction: handleReset
-      }
+  return {
+    state: data,
+    incrementFunction: handleIncrementCount,
+    decrementFunction: handleDecrementCount,
+    resetFunction: handleReset,
+  };
 }
