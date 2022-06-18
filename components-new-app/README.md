@@ -1,3 +1,3 @@
-## useState - 01
+## Custom Hooks - 01
 
-Rewrite the ClickCounter component from Events 01 as a function component, and use the useState hook to track the state of the counter.
+Create a custom hook useCounter that keeps track of the state of a counter, and returns the current value of the counter as well as three functions to increment, decrement and reset the counter.
