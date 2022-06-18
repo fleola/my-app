@@ -1,4 +1,5 @@
 import React from "react";
+import { CarDetails } from "./CarDetails";
 import { Counter } from "./Counter";
 import { GithubUser } from "./GithubUser";
 import { Hello } from "./Hello";
@@ -12,6 +13,9 @@ export class App extends React.Component {
         <Welcome name="John" age={19} />
         <Counter />
         <GithubUser username="fleola" />
+        <CarDetails
+          initialData={{ model: "panda", year: "2022", color: "blue" }}
+        />
       </div>
     );
   }
