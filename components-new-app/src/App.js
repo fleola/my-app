@@ -14,7 +14,7 @@ export class App extends React.Component {
         <Counter />
         <GithubUser username="fleola" />
         <CarDetails
-          initialData={{ model: "panda", year: "2022", color: "blue" }}
+          initialData={{ model: "panda", year: 2022, color: "blue" }}
         />
       </div>
     );
