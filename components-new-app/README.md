@@ -1,3 +1,3 @@
-## Context - 02
+## useContext
 
-Consume the LanguageContext within the DisplayLanguage component by using the context consumer, and show the selected language in an h1 tag.
+Rewrite the DisplayLanguage component from Context 02 to be a function component, and access the LanguageContext through the useContext hook.
