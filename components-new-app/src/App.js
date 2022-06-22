@@ -23,6 +23,7 @@ export function App() {
       </nav>
 
       <Routes>
+        <Route index element={<GithubUserList />} />
         <Route path="/" element={<Welcome name="Leo" />} />
         <Route path="/counter" element={<ClickCounter />} />
         <Route path="/users" element={<GithubUserList />}>

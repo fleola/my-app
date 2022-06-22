@@ -14,6 +14,8 @@ export function GithubUserList() {
   };
   return (
     <>
+      <h1>Add a user and select it</h1>
+
       <input
         name="username"
         value={username}
