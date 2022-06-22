@@ -20,6 +20,7 @@ export function GithubUserList() {
         onChange={handleInputChange}
       ></input>
       <button onClick={handleButtonClick}>Fetch user</button>
+      <hr />
       <div>
         <ul>
           {userArray.map((user) => (
