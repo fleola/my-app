@@ -1,3 +1,3 @@
-## React router - 03
+## React router - 04
 
-Add a new Route to the users/:username path that renders a ShowGithubUser component that receives the username as a path parameter and renders the GithubUser component from useEffect 03 by passing it the received username.
+Add three Links within the main App component and use them to navigate to all three routes.
