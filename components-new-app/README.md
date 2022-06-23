@@ -1,3 +1,3 @@
-## SWR - 01
+## SWR - 02
 
-Modify the useGithubUser custom hook from Custom Hooks 03 to use the useSWR hook to fetch the data of a Github user.
+Modify the useGithubUser hook so that, if the username is null, no request is made.
