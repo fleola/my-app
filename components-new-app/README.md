@@ -1,3 +1,3 @@
-## Redux - 01
+## Redux - 02
 
-Create a CounterReducer, along with its action types and action creators, to keep track of a counter that can be incremented, decremented and reset.
+Create a store that uses CounterReducer as its root reducer, and dispatch an INCREMENT action on the store. Verify that the state updates as expected.
