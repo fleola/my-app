@@ -11,10 +11,11 @@ export const todosState = createSlice({
   ],
   reducers: {
     add: (state, action) => [...state, action.payload],
-    remove: (state, action) => state.filter((todo) => todo !== action.payload),
+    remove: (state, action) =>
+      state.filter((todo) => todo.id !== action.payload.id),
     edit: (state, action) =>
       state.map((todo) => {
-        if (todo === action.payload) {
+        if (todo.id === action.payload.id) {
           return { ...todo, ...action.payload };
         }
         return todo;
