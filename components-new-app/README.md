@@ -1,3 +1,3 @@
-## React router - 07
+## Redux - 01
 
-Add an index route to the GithubUserList route that shows the "Add a user and select it" message.
+Create a CounterReducer, along with its action types and action creators, to keep track of a counter that can be incremented, decremented and reset.
