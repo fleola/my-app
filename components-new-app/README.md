@@ -1,3 +1,3 @@
-## Redux - 03
+## Redux - 04
 
-Create a TodosReducer that handles a list of todos (objects with an id, a title and a completed property), allowing for adding, removing and editing actions.
+Modify the store so that it uses a root reducer that combines both the counter and todos reducers. Dispatch actions for both the counter and the todos.
